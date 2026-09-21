@@ -43,3 +43,7 @@
   "completed": true
 }
 ```
+
+## Étape 6.2 :
+
+- Pour supprimer une todo, il faut faire un DELETE sur la ressource /todos/1

@@ -3,6 +3,7 @@ import { etape2 } from './etape2.js';
 import { etape3 } from './etape3.js';
 import { etape4 } from './etape4.js';
 import { etape5 } from './etape5.js';
+import { etape6 } from './etape6.js';
 
 window.addEventListener("DOMContentLoaded", () => {
 
@@ -11,5 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
     etape3();
     etape4();
     etape5();
+    etape6();
 
 });
