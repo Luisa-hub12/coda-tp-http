@@ -12,3 +12,34 @@
 ## Étape 2.2 :
 
 - Filtring ressources : https://jsonplaceholder.typicode.com/posts?userId=1
+
+## Étape 3.2 :
+
+- pour créer une todo, il faut faire un POST sur la ressource /todos/ avec le body suivant : 
+```json
+{
+  "userId": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}
+```
+
+## Étape 4.2 :
+
+- Pour remplacer une todo, il faut faire un PUT sur la ressource /todos/1 avec le body suivant : 
+```json
+{
+  "userId": 1,
+  "title": "delectus aut autem",
+  "completed": true
+}
+```
+
+## Étape 5.2 :
+
+- Pour modifier une todo, il faut faire un PATCH sur la ressource /todos/1 avec le body suivant : 
+```json
+{
+  "completed": true
+}
+```
