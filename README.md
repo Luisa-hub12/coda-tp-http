@@ -47,3 +47,15 @@
 ## Étape 6.2 :
 
 - Pour supprimer une todo, il faut faire un DELETE sur la ressource /todos/1
+
+## Bonus :
+
+-  pour remplacer la photo d'id 418 avec une nouvelle image. Puis immédiatement après l'associer à l'album d'id 42. il faut faire un PATCH sur la ressource /photos/418 avec le body suivant : 
+```json
+{
+  "albumId": 42,
+  "title": "new photo",
+  "url": "https://via.placeholder.com/600/92c952",
+  "thumbnailUrl": "https://via.placeholder.com/150/92c952"
+}
+```
