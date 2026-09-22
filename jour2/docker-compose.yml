@@ -1,0 +1,66 @@
+# services:
+#   ftp:
+#     image: fauria/vsftpd
+#     container_name: PRA-2026-ftp
+#     ports:
+#       - "21:21"
+#       - "20:20"
+#       - "21100-21110:21100-21110"
+#     environment:
+#       FTP_USER: test
+#       FTP_PASS: password
+#       PASV_ADDRESS: 127.0.0.1
+#       PASV_MIN_PORT: 21100
+#       PASV_MAX_PORT: 21110
+#     restart: unless-stopped
+
+#   ssh-server:
+#     image: lscr.io/linuxserver/openssh-server:latest
+#     container_name: PRA-2026-ssh-server
+#     environment:
+#       - PUID=1000
+#       - PGID=1000
+#       - TZ=Europe/Paris
+#       - SUDO_ACCESS=true
+#       - PASSWORD_ACCESS=true
+#       - USER_NAME=test
+#       - USER_PASSWORD=password
+#     ports:
+#       - "2222:2222"
+#     restart: unless-stopped
+
+#   mailpit:
+#     image: axllent/mailpit:latest
+#     container_name: PRA-2026-mailpit
+#     ports:
+#       - "8025:8025"
+#       - "1025:1025"
+#     restart: unless-stopped
+
+#   demo-ssl:
+#     image: node:alpine
+#     working_dir: /app
+#     ports:
+#       - "8080:8080"
+#       - "8443:8443"
+#     volumes:
+#       - ./demo-ssl:/app
+#     command: node server.js
+#     restart: unless-stopped
+version: '3.8'
+
+services:
+  ftp:
+    image: fauria/vsftpd
+    container_name: ftp-demo
+    ports:
+      - "21:21"
+      - "20:20"
+      - "21100-21110:21100-21110"
+    environment:
+      FTP_USER: test
+      FTP_PASS: password
+      PASV_ADDRESS: 127.0.0.1
+      PASV_MIN_PORT: 21100
+      PASV_MAX_PORT: 21110
+    restart: always
